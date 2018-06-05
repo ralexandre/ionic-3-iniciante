@@ -7,6 +7,10 @@
 <ion-header>
 
   <ion-navbar>
+      <button ion-button icon-only menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+
     <ion-title>Feed</ion-title>
   </ion-navbar>
 
@@ -14,7 +18,10 @@
 
 
 <ion-content padding>
-  <h3>User: {{ nome_usuario }}</h3>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+  <p>User: {{ nome_usuario }}</p>
   <ion-card *ngFor="let filme of lista_filmes">
 
     <ion-item>

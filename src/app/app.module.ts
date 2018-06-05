@@ -12,9 +12,11 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FeedPageModule } from '../pages/feed/feed.module';
 import { IntroPageModule } from '../pages/intro/intro.module';
+
 import { HttpModule } from '@angular/http'
 import { MoovieProvider } from '../providers/moovie/moovie';
 import { HttpClientModule } from '@angular/common/http';
+import { ConfiguracoesPageModule } from '../pages/configuracoes/configuracoes.module';
 @NgModule({
   declarations: [
     MyApp,
@@ -29,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     FeedPageModule,
     IntroPageModule,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    ConfiguracoesPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
